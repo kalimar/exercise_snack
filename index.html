@@ -24,6 +24,21 @@
       d.innerText = results;
       elm.appendChild(d)
      }
+
+      function setFont() {
+       const fontType = [ "Jersey", "Roboto", "Helvetica", "Impact"];
+       const num=Math.floor(Math.random()*3);
+       document.getElementById("wrapper").style.fontFamily =fontType[num];
+      }
+
+      function setBgColor() {
+        const color = [ "lightblue", "pink", "yellow", "white"]
+        const num=Math.floor(Math.random()*4);
+        document.getElementById("wrapper").style.backgroundColor =color[num];
+      }
+
+     setBgColor();
+     setFont(); 
      showSnack();
 </script> 
 </body>
