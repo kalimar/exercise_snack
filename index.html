@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+<title>exercise snack!</title>
+</head>
+<body>
+  <h1>Get on it!</h1>
+  <h2 id="snack"></h2>
+  <script> 
+    function getRandomValue(array) {
+        const randomIndex = Math.floor(Math.random() * array.length);
+        return array[randomIndex];
+    }
+
+    function showSnack() {
+      const exercise_collection = ["push-ups", "kb swings", "goblet squats", "pull-ups"];
+      const count = Math.floor(Math.random() * (20 - 1) + 1);
+      const exercise = getRandomValue(exercise_collection);
+      console.log(exercise);
+      const results = `Perform ${count} ${exercise}`;
+      const elm = document.getElementById('snack');
+      const d = document.createElement('div');
+      d.innerText = results;
+      elm.appendChild(d)
+     }
+     showSnack();
+</script> 
+</body>
+</html>
